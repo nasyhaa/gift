@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Ulang Tahun, Muhammad Alfan!</title>
     <!-- Link ke CDN Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="apan2.jpg" rel="stylesheet">
     <style>
         /* Background dengan gradient pastel */
         body {

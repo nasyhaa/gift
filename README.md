@@ -17,7 +17,7 @@
             margin: 0;
             font-family: 'Helvetica Neue', sans-serif;
         }
-        <img src="path-to-your-image.jpg" alt="Muhammad Alfan Ersianov Firdaus Sukandar" class="profile-photo">
+
         /* Container untuk keseluruhan kartu ulang tahun */
         .birthday-container {
             background: linear-gradient(135deg, #84fab0, #8fd3f4);
@@ -132,7 +132,7 @@
         <!-- Pesan Kejutan Tersembunyi -->
         <div id="surpriseMessage" class="hidden mt-4">
             <h3>🎉 Your Gift From Apann! 🎉</h3>
-            <p>Terima kasih banyak telah datang di kehidupan nasa ini yaaa. Semoga ulang tahun apann hari ini selalu dipenuhi dengan tawa dan kebahagiaan, pokoknya doa terbaik dari nasa buatt apann terus lewatin semuanyaa barengg barengg yaaa. I Lovee uu acumm sayangg! 😘</p>
+            <p>Terima kasih banyak telah datang di kehidupan nasa ini yaaa. Semoga ulang tahun apann hari ini selalu dipenuhi dengan tawa dan kebahagiaan, pokoknya doa terbaik dari nasa buatt apann terus lewatin semuanyaabarengg barengg yaaa. I Lovee uu acumm sayangg! 😘</p>
         </div>
     </div>
 

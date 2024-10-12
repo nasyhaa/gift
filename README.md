@@ -1,147 +1,153 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selamat Ulang Tahun, Muhammad Alfan!</title>
-    <!-- Link ke CDN Bootstrap -->
-    <link href="apan2.jpg" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Background dengan gradient pastel */
+        /* Latar belakang gradient */
         body {
-            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            background: linear-gradient(135deg, #ffefba, #ffffff);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
         }
 
-        /* Container untuk keseluruhan kartu ulang tahun */
+        /* Container untuk halaman */
         .birthday-container {
-            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+            background-color: #fff;
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
+            border-radius: 15px;
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Gaya untuk foto profil dengan animasi */
-        .profile-photo {
+        /* Gaya untuk kue ulang tahun */
+        .cake {
             width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #fff;
-            border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            animation: bounce 2s infinite;
+            margin: 0 auto;
+            position: relative;
         }
 
-        /* Animasi bounce untuk gambar */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
+        .cake img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Balon animasi */
+        .balloon {
+            position: absolute;
+            bottom: -100px; /* Awalnya di luar tampilan */
+            animation: fly 6s linear infinite;
+            width: 80px;
+        }
+
+        @keyframes fly {
+            0% {
+                bottom: -100px; /* Mulai dari bawah */
+                opacity: 1;
             }
             50% {
-                transform: translateY(-10px);
+                opacity: 1;
+                transform: translateY(-200px); /* Naik */
+            }
+            100% {
+                bottom: -100px; /* Kembali di luar tampilan */
+                opacity: 0; /* Memudar */
             }
         }
 
-        /* Animasi fade-in untuk container */
+        /* Gaya tombol dan pesan */
+        .btn-surprise {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 2s forwards;
+        }
+
         @keyframes fadeIn {
-            from {
+            0% {
                 opacity: 0;
             }
-            to {
+            100% {
                 opacity: 1;
             }
         }
 
-        /* Tombol dengan gaya modern */
-        .btn-surprise {
-            background-color: #ff8a65;
-            color: white;
-            font-size: 18px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 30px;
-            box-shadow: 0 4px 15px rgba(255, 138, 101, 0.4);
-            transition: background-color 0.3s ease, transform 0.3s ease;
+        /* Lilin yang berkedip */
+        .candle-flame {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 40px;
+            background-color: orange;
+            border-radius: 50%;
+            animation: flicker 0.5s alternate infinite;
         }
 
-        .btn-surprise:hover {
-            background-color: #ff7043;
-            transform: scale(1.05);
-        }
-
-        /* Pesan kejutan tersembunyi dengan animasi */
-        .hidden {
-            display: none;
-        }
-
-        #surpriseMessage {
-            background-color: #fff3e0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        /* Gaya teks untuk ucapan */
-        h1 {
-            font-size: 36px;
-            color: #ffffff;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 28px;
-            color: #ffffff;
-            font-weight: 300;
-        }
-
-        p {
-            font-size: 18px;
-            color: #333;
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
     <div class="birthday-container">
-        <!-- Foto Ulang Tahun -->
-        <div class="photo-section">
-            <img src="img/apan 2.jpg" alt="Foto Muhammad Alfan" class="profile-photo">
+        <!-- Kue ulang tahun -->
+        <div class="cake">
+            <div class="candle-flame"></div>
+            <img src="https://i.imgur.com/4N6OTmD.png" alt="Kue Ulang Tahun">
         </div>
-        
-        <!-- Nama dan Pesan Ucapan -->
-        <div class="message-section mt-4">
-            <h2 class="fw-normal">Hari ini, 13 Oktober 2024</h2>
-            <h1 class="fw-bold">Selamat Ulang Tahun!</h1>
-            <h2 class="fw-light">Muhammad Alfan Ersianov Firdaus Sukandar</h2>
-        </div>
-        
+
+        <!-- Pesan Ucapan -->
+        <h1 class="fw-bold mt-4">Selamat Ulang Tahun, Alfan!</h1>
+        <h3 class="fw-light">Semoga semua impianmu terwujud 🎂</h3>
+
         <!-- Tombol Kejutan -->
-        <button id="surpriseButton" class="btn-surprise mt-4">Open Your Surprise!!</button>
-        
-        <!-- Pesan Kejutan Tersembunyi -->
-        <div id="surpriseMessage" class="hidden mt-4">
-            <h3>🎉 Your Gift From Apann! 🎉</h3>
-            <p>Terima kasih banyak telah datang di kehidupan nasa ini yaaa. Semoga ulang tahun apann hari ini selalu dipenuhi dengan tawa dan kebahagiaan, pokoknya doa terbaik dari nasa buatt apann terus lewatin semuanyaa barengg barengg yaaa. I Lovee uu acumm sayangg! 😘</p>
+        <button id="surpriseButton" class="btn btn-primary btn-surprise">Open Your Surprise!!</button>
+
+        <!-- Pesan kejutan tersembunyi -->
+        <div id="surpriseMessage" class="hidden-message">
+            <h2>🎉 Kejutan Spesial untuk Alfan! 🎉</h2>
+            <p>Semoga hari-harimu selalu dipenuhi dengan tawa, cinta, dan kebahagiaan! 🎈</p>
+        </div>
+
+        <!-- Balon animasi -->
+        <div class="balloons">
+            <img src="https://i.imgur.com/KJXmDnF.png" alt="Balon" class="balloon" style="left: 10%;">
+            <img src="https://i.imgur.com/KJXmDnF.png" alt="Balon" class="balloon" style="left: 40%;">
+            <img src="https://i.imgur.com/KJXmDnF.png" alt="Balon" class="balloon" style="left: 70%;">
         </div>
     </div>
 
     <script>
-        // Menangani event klik pada tombol
+        // Menampilkan pesan kejutan saat tombol diklik
         document.getElementById('surpriseButton').addEventListener('click', function() {
             var surpriseMessage = document.getElementById('surpriseMessage');
-            surpriseMessage.classList.toggle('hidden'); // Menampilkan atau menyembunyikan pesan kejutan
-            this.textContent = surpriseMessage.classList.contains('hidden') ? 'Open Your Surprise!!' : 'Close Your Surprise'; // Mengubah teks tombol
+            surpriseMessage.style.display = 'block'; // Menampilkan pesan kejutan
         });
     </script>
 </body>

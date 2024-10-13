@@ -115,8 +115,7 @@
 <body>
     <div class="birthday-container">
         <!-- Foto Ulang Tahun -->
-        <div class="photo-section">
-            <img src="img/apan 2.jpg" alt="Foto Muhammad Alfan" class="profile-photo">
+        <div class="photo-section" <imgsrc="img/apan 2.jpg" alt="Foto Muhammad Alfan" class="profile-photo">
         </div>
         
         <!-- Nama dan Pesan Ucapan -->
